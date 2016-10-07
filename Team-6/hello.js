@@ -24,6 +24,19 @@ function getuserid(person_name)
 
 }
 
+function getmaxid(table_name)
+{
+
+   connection.query('select max(eveorg) from  eveorg' , function(err, rows, fields){
+      if(err) throw err;
+
+      for (var i = 0; i < rows.length; i++) {
+                            
+                            return rows[i].person_id;
+                          }; 
+    });
+}
+
 const server = http.createServer(function(req, res){
   res.statusCode = 200;
   res.setHeader("Access-Control-Allow-Origin", "*");
