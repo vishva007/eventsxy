@@ -84,7 +84,7 @@ const server = http.createServer(function(req, res){
                         var event_id = (JSON.parse(chunk).event_id);
                         var user = (JSON.parse(chunk).user);
                         var user_id =getuserid(user);
-                        connection.query('insert into eveorg values ()')
+                        connection.query('insert into eveorg  (event_id,person_id,role,score,eveorg_comments) values(1,2,2,0.0,\'oo\');')
 
 
 
